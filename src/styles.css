@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+
+body{
+    font-family: "Catamaran", serif;
+}
+:root{
+    --primary-color:#760308;
+    --secondary-color:#B52228;
+    --font-family:"Catamaran", serif;
+}
