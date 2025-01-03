@@ -1,13 +1,27 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { SayonaService } from '../sayona.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule],
+  imports: [CarouselModule,CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+  landingpagedata:any;
+
+  SliderImage:string = '';
+  Slider2Image:string = '';
+  Slider3Image:string = '';
+
+  ngOnInit(): void {
+    this.getalldata();
+  }
+
+  constructor(private service:SayonaService){}
 
 
 
@@ -79,6 +93,20 @@ export class HomeComponent {
     } else {
       header?.classList.remove('scrolled');
     }
+  }
+
+
+
+  getalldata(){
+    this.service.GetAllData().subscribe(
+      (Response:any)=>{
+        this.landingpagedata = Response;
+
+        this.SliderImage = `url(${Response.Slider1})`;
+        this.Slider2Image = `url(${Response.Slider2})`;
+        this.Slider3Image = `url(${Response.Slider3})`;
+      }
+    )
   }
 
 }
