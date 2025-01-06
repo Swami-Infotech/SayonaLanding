@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { SayonaService } from '../sayona.service';
 import { CommonModule } from '@angular/common';
@@ -9,9 +9,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit  {
 
   landingpagedata:any;
+
 
   SliderImage:string = '';
   Slider2Image:string = '';
@@ -108,5 +109,8 @@ export class HomeComponent implements OnInit {
       }
     )
   }
+
+
+
 
 }
