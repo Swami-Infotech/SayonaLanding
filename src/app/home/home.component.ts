@@ -14,6 +14,12 @@ export class HomeComponent implements OnInit  {
   landingpagedata:any;
 
 
+  ClientNumber:number = 0;
+  YearNumber:number = 0;
+  ProjectNumber:number = 0;
+  ProfitNumber:number = 0;
+
+
   SliderImage:string = '';
   Slider2Image:string = '';
   Slider3Image:string = '';
@@ -106,10 +112,38 @@ export class HomeComponent implements OnInit  {
         this.SliderImage = `url(${Response.Slider1})`;
         this.Slider2Image = `url(${Response.Slider2})`;
         this.Slider3Image = `url(${Response.Slider3})`;
+        this.startCounter();
       }
     )
   }
 
+  startCounter() {
+    const duration = 2000; // 2 seconds
+    const stepTime = 50; // Interval of 50ms
+    const steps = Math.ceil(duration / stepTime);
+
+    this.animateCounter('ClientNumber', this.landingpagedata.ClientNumber, duration, stepTime);
+    this.animateCounter('YearNumber', this.landingpagedata.YearNumber, duration, stepTime);
+    this.animateCounter('ProjectNumber', this.landingpagedata.ProjectNumber, duration, stepTime);
+    this.animateCounter('ProfitNumber', this.landingpagedata.ProfitNumber, duration, stepTime);
+  }
+
+  animateCounter(field: string, targetValue: number, duration: number, stepTime: number) {
+    const steps = duration / stepTime;
+    const increment = Math.ceil(targetValue / steps);
+    let currentValue = 0;
+
+    const interval = setInterval(() => {
+      currentValue += increment;
+
+      if (currentValue >= targetValue) {
+        currentValue = targetValue;
+        clearInterval(interval);
+      }
+
+      (this as any)[field] = currentValue;
+    }, stepTime);
+  }
 
 
 

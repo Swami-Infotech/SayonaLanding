@@ -154,28 +154,28 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="client my-3 text-center">
                 <h6>01</h6>
-                <h4>{{landingpagedata?.ClientNumber}}+</h4>
+                <h4>{{ ClientNumber }}+</h4>
                 <h5>{{landingpagedata?.ClientTitle}}</h5>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="year text-center my-3">
                 <h6>02</h6>
-                <h4>{{landingpagedata?.YearNumber}}+</h4>
+                <h4>{{YearNumber}}+</h4>
                 <h5>{{landingpagedata?.YearTitle}}</h5>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="project my-3 text-center">
                 <h6>03</h6>
-                <h4>{{landingpagedata?.ProjectNumber}}+</h4>
+                <h4>{{ProjectNumber}}+</h4>
                 <h5>{{landingpagedata?.ProjectTitle}}</h5>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="profit my-3 text-center">
                 <h6>04</h6>
-                <h4>{{landingpagedata?.ProfitNumber}}%</h4>
+                <h4>{{ProfitNumber}}%</h4>
                 <h5>{{landingpagedata?.ProfitTitle}}</h5>
               </div>
             </div>
@@ -399,6 +399,79 @@
               </div>
               <div class="testi-img">
                 <img src="{{landingpagedata?.TestimonialImage1}}" alt="">
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template carouselSlide class="owl-stage">
+            <div class="testi-slider">
+              <div class="testis-cont">
+                <div class="card">
+                  <div class="rating">
+                    <ul class="d-flex flex-wrap align-items-center">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                  <h5>{{landingpagedata?.Testimonial2}}</h5>
+                  <div class="testi-name mt-3">
+                    <h5>{{landingpagedata?.TestimonialName2}} </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="testi-img">
+                <img src="{{landingpagedata?.TestimonialImage2}}" alt="">
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide class="owl-stage">
+            <div class="testi-slider">
+              <div class="testis-cont">
+                <div class="card">
+                  <div class="rating">
+                    <ul class="d-flex flex-wrap align-items-center">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                  <h5>{{landingpagedata?.Testimonial3}}</h5>
+                  <div class="testi-name mt-3">
+                    <h5>{{landingpagedata?.TestimonialNname3}} </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="testi-img">
+                <img src="{{landingpagedata?.TestimonialImage3}}" alt="">
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide class="owl-stage">
+            <div class="testi-slider">
+              <div class="testis-cont">
+                <div class="card">
+                  <div class="rating">
+                    <ul class="d-flex flex-wrap align-items-center">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                  <h5>{{landingpagedata?.Testimonial4}}</h5>
+                  <div class="testi-name mt-3">
+                    <h5>{{landingpagedata?.TestimonialName4}} </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="testi-img">
+                <img src="{{landingpagedata?.TestimonialImage4}}" alt="">
               </div>
             </div>
           </ng-template>
