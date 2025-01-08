@@ -743,6 +743,24 @@ ul li {
 
 
 /* media query start */
+@media (max-width:1440px) {
+  .about {
+    margin: 17% 0;
+}
+}
+@media (max-width:1280px) {
+  .testis-cont {
+    background-color: #F5F5F5;
+    width: 80%;
+    margin: 0 2%;
+    padding: 8% 8%;
+}
+.testi-img {
+  position: absolute;
+  top: 30%;
+  right: 7%;
+}
+}
 @media (max-width:768px) {
   .about-color {
     background-color: #F5F5F5;
@@ -774,6 +792,150 @@ ul li {
     position: relative;
     z-index: 0;
   }
+}
+
+@media (max-width:490px) {
+  .testis-cont {
+    background-color: #F5F5F5;
+    width: 81%;
+    margin: 0;
+    padding: 8% 6%;
+  }
+
+  .testis-cont h5 {
+    font-size: 14px;
+  }
+  .testi-img   img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.counter {
+  background-image: url(../../assets/counter/counter.png);
+  background-size: cover;
+  height: 660px;
+  padding: 15% 5%;
+  color: #fff;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+.top-section {
+  position: relative;
+  height: 70vh;
+  top: 0px;
+}
+.testis-cont {
+  background-color: #F5F5F5;
+  width: 81%;
+  margin: 0;
+  padding: 8% 4%;
+}
+.slider1-cont {
+  padding: 19% 10%;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  background: #fff;
+}
+}
+
+@media (max-width:470px) {
+  .testis-cont {
+    background-color: #F5F5F5;
+    width: 81%;
+    margin: 0;
+    padding: 8% 6%;
+  }
+
+  .testis-cont h5 {
+    font-size: 14px;
+  }
+  .testi-img   img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.counter {
+  background-image: url(../../assets/counter/counter.png);
+  background-size: cover;
+  height: 660px;
+  padding: 15% 5%;
+  color: #fff;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+.top-section {
+  position: relative;
+  height: 70vh;
+  top: 0px;
+}
+.testis-cont {
+  background-color: #F5F5F5;
+  width: 81%;
+  margin: 0;
+  padding: 8% 4%;
+}
+.slider1-cont {
+  padding: 19% 10%;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  background: #fff;
+}
+}
+
+@media (max-width:460px) {
+  .testis-cont {
+    background-color: #F5F5F5;
+    width: 81%;
+    margin: 0;
+    padding: 8% 6%;
+  }
+
+  .testis-cont h5 {
+    font-size: 14px;
+  }
+  .testi-img   img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.counter {
+  background-image: url(../../assets/counter/counter.png);
+  background-size: cover;
+  height: 660px;
+  padding: 15% 5%;
+  color: #fff;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+.top-section {
+  position: relative;
+  height: 70vh;
+  top: 0px;
+}
+.testis-cont {
+  background-color: #F5F5F5;
+  width: 81%;
+  margin: 0;
+  padding: 8% 4%;
+}
+.slider1-cont {
+  padding: 19% 10%;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  background: #fff;
+}
 }
 
 @media (max-width : 426px) {
@@ -842,11 +1004,92 @@ ul li {
 .navbar-collapse{
   background-color: #fff;
 }
-.slider{
+/* .slider{
   margin: 15px 0;
-}
+} */
 .export {
   margin-top: 200px;
+}
+}
+
+@media (max-width:380px) {
+  .testis-cont {
+    background-color: #F5F5F5;
+    width: 81%;
+    margin: 0;
+    padding: 8% 6%;
+  }
+
+  .testis-cont h5 {
+    font-size: 14px;
+  }
+  .testi-img   img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.counter {
+  background-image: url(../../assets/counter/counter.png);
+  background-size: cover;
+  height: 660px;
+  padding: 15% 5%;
+  color: #fff;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+.top-section {
+  position: relative;
+  height: 70vh;
+  top: 0px;
+}
+.testis-cont {
+  background-color: #F5F5F5;
+  width: 81%;
+  margin: 0;
+  padding: 8% 4%;
+}
+.slider1-cont {
+  padding: 19% 10%;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  background: #fff;
+}
+.about {
+  margin: 69% 0;
+}
+.email-icon {
+  background-color: #B52228;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 21px;
+  padding: 6px 0;
+}
+.add-icon {
+  background-color: #B52228;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 21px;
+  padding: 6px 0;
+}
+.call-icon {
+  background-color: #B52228;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 21px;
+  padding: 6px 0;
 }
 }
 
