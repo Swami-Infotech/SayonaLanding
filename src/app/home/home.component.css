@@ -173,6 +173,10 @@ ul li {
   font-family: var(--font-family);
   font-weight: 600;
 }
+.export-desc h5{
+  font-family: var(--font-family);
+  font-weight: 600;
+}
 /* EXPORT CSS END */
 
 /* Statistics start */
