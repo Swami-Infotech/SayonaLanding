@@ -2,10 +2,11 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { SayonaService } from '../sayona.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule,CommonModule],
+  imports: [CarouselModule,CommonModule,FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -145,6 +146,61 @@ export class HomeComponent implements OnInit  {
     }, stepTime);
   }
 
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = document.getElementById('mainheader')?.offsetHeight || 0; // Get header height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect; // Position of the element relative to the top of the document
+      const offsetPosition = elementPosition - headerHeight; // Adjust for the header height
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }
+  
+
+
+  formData = {
+    companyID: 7,  
+    fullName: '',
+    phoneNumber: '',
+    email: '',  
+    organization: '',  
+    city: '',
+  };
+
+  PostcontactUs(form: NgForm) {
+    // Check if the form is valid
+    if (form.invalid) {
+      console.warn('Form is invalid, please correct the errors.');
+      return;
+    }
+
+    // Call the service to post the data
+    this.service.ContactUS(this.formData).subscribe(
+      (resp: any) => {
+        console.log('Form submitted successfully:', resp);
+        alert('Form submitted successfully!');
+        form.resetForm(); // Reset the form after successful submission
+        this.formData = {
+          companyID: 7,
+          fullName: '',
+          phoneNumber: '',
+          email: '',
+          organization: '',
+          city: '',
+        }; // Reset the form data
+      },
+      (error: any) => {
+        console.error('Error submitting form:', error);
+        alert('An error occurred while submitting the form.');
+      }
+    );
+  }
 
 
 }

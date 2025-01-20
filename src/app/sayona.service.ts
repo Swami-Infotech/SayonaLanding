@@ -13,4 +13,8 @@ export class SayonaService {
     return this.http.get("https://pagesapi.swamiinfotech.in/Web/GetPageData/7");
   }
 
+  ContactUS(data:any){
+    return this.http.post(`https://pagesapi.swamiinfotech.in/Web/AddContactUS`,data)
+  }
+
 }

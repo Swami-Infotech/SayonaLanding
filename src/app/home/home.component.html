@@ -5,19 +5,22 @@
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="slider1-cont" [ngStyle]="{'background-image': SliderImage , 'height': '750px','background-size':'cover','width':'100%'}">
+          <div class="slider1-cont"
+            [ngStyle]="{'background-image': SliderImage , 'background-position': 'center', 'height': '750px','background-size':'cover','width':'100%'}">
             <h1>{{landingpagedata?.Slider1Content}}</h1>
             <p>{{landingpagedata?.Slider1Pargh}}</p>
           </div>
         </div>
         <div class="carousel-item">
-          <div class="slider1-cont" [ngStyle]="{'background-image': Slider2Image , 'height': '750px','background-size':'cover'}">
+          <div class="slider1-cont"
+            [ngStyle]="{'background-image': Slider2Image , 'background-position': 'center',  'height': '750px','background-size':'cover'}">
             <h1>{{landingpagedata?.Slider1Content}}</h1>
             <p>{{landingpagedata?.Slider1Pargh}}</p>
           </div>
         </div>
         <div class="carousel-item">
-          <div class="slider1-cont" [ngStyle]="{'background-image': Slider3Image , 'height': '750px','background-size':'cover'}">
+          <div class="slider1-cont"
+            [ngStyle]="{'background-image': Slider3Image , 'background-position': 'center',  'height': '750px','background-size':'cover'}">
             <h1>{{landingpagedata?.Slider1Content}}</h1>
             <p>{{landingpagedata?.Slider1Pargh}}</p>
           </div>
@@ -49,23 +52,25 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Header Navigation -->
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home" (click)="scrollToSection('home')">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link"  (click)="scrollToSection('about')">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Inquiry</a>
+              <a class="nav-link"   (click)="scrollToSection('inquiry')">Inquiry</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Statistics</a>
+              <a class="nav-link"  (click)="scrollToSection('statistics')">Statistics</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link"   (click)="scrollToSection('contact')">Contact Us</a>
             </li>
           </ul>
+
         </div>
       </div>
     </nav>
@@ -75,7 +80,7 @@
 </section>
 
 <!-- about section start -->
-<section class="about">
+<section id="about" class="about">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12">
@@ -85,14 +90,15 @@
           </h5>
         </div>
         <div class="about-cont">
-          <p>{{landingpagedata?.AboutContent}}</p>
+          <p style="text-align: justify;">{{landingpagedata?.AboutContent}}</p>
         </div>
         <div class="about-btn">
-          <button class="btn"><a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-white">Learn More</a></button>
+          <button class="btn"><a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank"
+              class="text-white">Learn More</a></button>
         </div>
 
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="col-lg-6 col-md-6 col-sm-12  d-flex align-items-center">
         <div class="about-color"></div>
         <div class="about-img">
           <img src="{{landingpagedata?.AboutImage}}" alt="" class="img-fluid">
@@ -105,7 +111,7 @@
 
 
 <!-- export section start -->
- <section class="export">
+<section class="export">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -116,35 +122,37 @@
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="export-desc my-3">
-          <h5>{{landingpagedata?.Exportdesc}}</h5>
+          <h5 style="text-align: justify;">{{landingpagedata?.Exportdesc}}</h5>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-md-12">
-        <div class="expo-img text-center">
-          <img src="{{landingpagedata?.Export1Image}}" alt="" >
-          <div class="expo-name">
-            <h3>{{landingpagedata?.Export1Name}}</h3>
-            <h5>{{landingpagedata?.Export1SubName}}</h5>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-md-6 col-sm-6">
+          <div class="expo-img text-center">
+            <img class="rounded img-fluid" src="{{landingpagedata?.Export1Image}}" alt="">
+            <div class="expo-name">
+              <h3>{{landingpagedata?.Export1Name}}</h3>
+              <h5>{{landingpagedata?.Export1SubName}}</h5>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <div class="expo-img text-center">
-          <img src="{{landingpagedata?.Export2Image}}" alt="">
-          <div class="expo-name">
-            <h3>{{landingpagedata?.Export2Name}}</h3>
-            <h5>{{landingpagedata?.Export2SubName}}</h5>
+        <div class="col-lg-6 col-md-6 col-md-6 col-sm-6">
+          <div class="expo-img text-center">
+            <img class="rounded img-fluid" src="{{landingpagedata?.Export2Image}}" alt="">
+            <div class="expo-name">
+              <h3>{{landingpagedata?.Export2Name}}</h3>
+              <h5>{{landingpagedata?.Export2SubName}}</h5>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
- </section>
+</section>
 <!-- export section end -->
 
 
 <!-- stastic section start -->
-<section class="Statistics">
+<section  id="statistics" class="Statistics mt-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -155,35 +163,35 @@
 
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="counter">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="row" style="height: 45vh;">
+            <div class="col-lg-4 col-md-6 col-sm-12 triputi">
               <div class="client my-3 text-center">
                 <h6>01</h6>
                 <h4>{{ ClientNumber }}+</h4>
                 <h5>{{landingpagedata?.ClientTitle}}</h5>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 triputi">
               <div class="year text-center my-3">
                 <h6>02</h6>
                 <h4>{{YearNumber}}+</h4>
                 <h5>{{landingpagedata?.YearTitle}}</h5>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 triputi">
               <div class="project my-3 text-center">
                 <h6>03</h6>
                 <h4>{{ProjectNumber}}+</h4>
                 <h5>{{landingpagedata?.ProjectTitle}}</h5>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <!-- <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="profit my-3 text-center">
                 <h6>04</h6>
                 <h4>{{ProfitNumber}}%</h4>
                 <h5>{{landingpagedata?.ProfitTitle}}</h5>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -201,7 +209,11 @@
         <div class="consult-title">
           <h2>{{landingpagedata?.ConsultTitle}}</h2>
           <h3>{{landingpagedata?.ConsultSubTitle}}</h3>
-          <button class="btn">GET CONSULT</button>
+
+          <button class="btn consult-btn">
+            <a href="https://api.whatsapp.com/send?phone=919016356950" style="text-decoration: none;" target="_blank"
+              class="text-light">GET CONSULT</a></button>
+
         </div>
       </div>
     </div>
@@ -222,46 +234,120 @@
             <h3>{{landingpagedata?.SectorSubTitle}}</h3>
           </div>
         </div>
-        <div class="row py-5">
-          <owl-carousel-o [options]="customOptions3">
-            <ng-template carouselSlide class="owl-stage">
-              <div class="sectors-img">
-                <div class="card">
-                  <img src="{{landingpagedata?.ConsultiveImage1}}" class="card-img-top" alt="...">
-                </div>
-                <div class="sectors-card">
-                  <h5 class="m-0">{{landingpagedata?.ConsultiveTitle}}</h5>
-                  <button class="btn p-0"><a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn More</a><i class="bi bi-arrow-right ms-2"></i></button>
-                </div>
-              </div>
-            </ng-template>
+        <div class="row">
 
-            <ng-template carouselSlide>
-              <div class="sectors-img">
-                <div class="card">
-                  <img src="{{landingpagedata?.ConsultiveImage2}}" class="card-img-top" alt="...">
-                </div>
-                <div class="sectors-card">
-                  <h5 class="m-0">{{landingpagedata?.ConsultiveTitle1}}</h5>
-                  <button class="btn p-0"><a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn More</a><i class="bi bi-arrow-right ms-2"></i></button>
-                </div>
-              </div>
-            </ng-template>
 
-            <ng-template carouselSlide>
-              <div class="sectors-img">
-                <div class="card">
-                  <img src="{{landingpagedata?.ConsultiveImage3}}" class="card-img-top" alt="...">
-                </div>
-                <div class="sectors-card">
-                  <h5 class="m-0">{{landingpagedata?.ConsultiveTitle2}}</h5>
-                  <button class="btn p-0">
-                    <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn More</a><i class="bi bi-arrow-right ms-2"></i></button>
-                </div>
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="sectors-img">
+              <div class="card">
+                <img src="{{landingpagedata?.ConsultiveImage2}}" class="card-img-top img-fluid" alt="...">
               </div>
-            </ng-template>
-          </owl-carousel-o>
+              <div class="sectors-card">
+                <h5 class="m-0">{{landingpagedata?.ConsultiveTitle1}}</h5>
+                <button class="btn p-0">
+                  <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn
+                    More</a>
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="sectors-img">
+              <div class="card">
+                <img src="{{landingpagedata?.ConsultiveImage3}}" class="card-img-top img-fluid" alt="...">
+              </div>
+              <div class="sectors-card">
+                <h5 class="m-0">{{landingpagedata?.ConsultiveTitle2}}</h5>
+                <button class="btn p-0">
+                  <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn
+                    More</a>
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="sectors-img">
+              <div class="card">
+                <img src="{{landingpagedata?.ConsultiveImage1}}" class="card-img-top img-fluid" alt="...">
+              </div>
+              <div class="sectors-card">
+                <h5 class="m-0">{{landingpagedata?.ConsultiveTitle}}</h5>
+                <button class="btn p-0">
+                  <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn
+                    More</a>
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="sectors-img">
+              <div class="card">
+                <img src="{{landingpagedata?.ConsultiveImage5}}" class="card-img-top img-fluid" alt="...">
+              </div>
+              <div class="sectors-card">
+                <h5 class="m-0">{{landingpagedata?.ConsultiveTitle5}}</h5>
+                <button class="btn p-0">
+                  <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn
+                    More</a>
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="sectors-img">
+              <div class="card">
+                <img src="{{landingpagedata?.ConsultiveImage4}}" class="card-img-top img-fluid" alt="...">
+              </div>
+              <div class="sectors-card">
+                <h5 class="m-0">{{landingpagedata?.ConsultiveTitle4}}</h5>
+                <button class="btn p-0">
+                  <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn
+                    More</a>
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="sectors-img">
+              <div class="card">
+                <img src="{{landingpagedata?.ConsultiveImage6}}" class="card-img-top img-fluid" alt="...">
+              </div>
+              <div class="sectors-card">
+                <h5 class="m-0">{{landingpagedata?.ConsultiveTitle6}}</h5>
+                <button class="btn p-0">
+                  <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank" class="text-dark">Learn
+                    More</a>
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+
         </div>
+
+
+
       </div>
     </div>
   </div>
@@ -280,41 +366,70 @@
         </div>
       </div>
 
-      <div class="col-lg-12 col-md-12 col-sm-12">
-        <owl-carousel-o [options]="customOptions4">
-          <ng-template carouselSlide class="owl-stage">
-            <div class="company p-3">
-              <div class="card px-4">
-                <img src="{{landingpagedata?.CollboratedImage}}" alt="" class="card-img-top">
-                <div class="company-name my-4">
-                  <h5>{{landingpagedata?.CompanyName1}}</h5>
-                </div>
-              </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card cardAB px-4">
+            <img src="{{landingpagedata?.CollboratedImage}}" alt="" class="img-fluid card-img-top-logos">
+            <div class="company-name my-4">
+              <h5>{{landingpagedata?.CompanyName1}}</h5>
             </div>
-          </ng-template>
+          </div>
+        </div>
 
-          <ng-template carouselSlide>
-            <div class="company p-3">
-              <div class="card px-4">
-                <img src="{{landingpagedata?.CollboratedImage}}" alt="" class="card-img-top">
-                <div class="company-name my-4">
-                  <h5>{{landingpagedata?.CompanyName1}}</h5>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card cardAB px-4">
+            <img src="{{landingpagedata?.CompanyImage2}}" alt="" class="img-fluid card-img-top-logos">
+            <div class="company-name my-4">
+              <h5>{{landingpagedata?.CompanyName2}}</h5>
             </div>
-          </ng-template>
+          </div>
+        </div>
 
-          <ng-template carouselSlide>
-            <div class="company p-3">
-              <div class="card px-4">
-                <img src="{{landingpagedata?.CollboratedImage}}" alt="" class="card-img-top">
-                <div class="company-name my-4">
-                  <h5>{{landingpagedata?.CompanyName1}}</h5>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card cardAB px-4">
+            <img src="{{landingpagedata?.CompanyImage3}}" alt="" class="img-fluid card-img-top-logos">
+            <div class="company-name my-4">
+              <h5>{{landingpagedata?.CompanyName3}}</h5>
             </div>
-          </ng-template>
-        </owl-carousel-o>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card cardAB px-4">
+            <img src="{{landingpagedata?.CompanyImage4}}" alt="" class="img-fluid card-img-top-logos">
+            <div class="company-name my-4">
+              <h5>{{landingpagedata?.CompanyName4}}</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card cardAB px-4">
+            <img src="{{landingpagedata.CompanyImage5}}" alt="" class="img-fluid card-img-top-logos">
+            <div class="company-name my-4">
+              <h5>{{landingpagedata?.CompanyName5}}</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card cardAB px-4">
+            <img src="{{landingpagedata.CompanyImage6}}" alt="" class="img-fluid card-img-top-logos">
+            <div class="company-name my-4">
+              <h5>{{landingpagedata?.CompanyName6}}</h5>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card cardAB px-4">
+            <img src="{{landingpagedata.CompanyImage7}}" alt="" class="img-fluid card-img-top-logos">
+            <div class="company-name my-4">
+              <h5>{{landingpagedata?.CompanyName7}}</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -323,7 +438,7 @@
 
 
 <!-- contact section start -->
-<section class="contact">
+<section id="contact" class="contact">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6 col-md-12 col-sm-12">
@@ -334,37 +449,57 @@
 
       <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="contact-title my-3">
-          <h4 class="mb-4">{{landingpagedata?.ContactUsTitle}}</h4>
-          <p>{{landingpagedata?.ContactCont}}</p>
+          <h4 class="mb-4">{{ landingpagedata?.ContactUsTitle }}</h4>
+          <p>{{ landingpagedata?.ContactCont }}</p>
         </div>
+
+        <!-- Email -->
         <div class="email d-flex flex-wrap align-items-center">
           <div class="email-icon">
             <i class="bi bi-envelope-fill"></i>
           </div>
           <div class="email-add ms-3">
             <h4 class="m-0">Email</h4>
-            <h5 class="m-0">{{landingpagedata?.contactEmail}}</h5>
+            <h5 class="m-0">
+              <a style="color: black;" [href]="'mailto:' + landingpagedata?.contactEmail" class="text-decoration-none">
+                {{ landingpagedata?.contactEmail }}
+              </a>
+            </h5>
           </div>
         </div>
+
+        <!-- Address -->
         <div class="address d-flex flex-wrap align-items-center">
           <div class="add-icon">
             <i class="bi bi-geo-alt-fill"></i>
           </div>
-          <div class="add-cont ms-3">
+          <div class="add-cont ms-3" style="max-width:70%">
             <h4 class="m-0">Address</h4>
-            <h5 class="m-0">{{landingpagedata?.ContactAddress}}</h5>
+            <h5 class="m-0">
+              <a style="color: black;" [href]="'https://www.google.com/maps?q=21.2344216,72.8769033'" target="_blank"
+                class="text-decoration-none">
+                {{ landingpagedata?.ContactAddress }}
+              </a>
+            </h5>
           </div>
         </div>
+
+        <!-- Phone Number -->
         <div class="call d-flex flex-wrap align-items-center">
           <div class="call-icon">
             <i class="bi bi-telephone-fill"></i>
           </div>
           <div class="call-cont ms-3">
             <h4 class="m-0">Phone Number</h4>
-            <h5 class="m-0">{{landingpagedata?.ContactNumber}}</h5>
+            <h5 class="m-0">
+              <a style="color: black;" [href]="'tel:' + landingpagedata?.ContactNumber" class="text-decoration-none">
+                {{ landingpagedata?.ContactNumber }}
+              </a>
+            </h5>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -384,7 +519,7 @@
       <div class="col-lg-12 col-md-12 col-sm-12">
         <owl-carousel-o [options]="customOptions5">
           <ng-template carouselSlide class="owl-stage">
-            <div class="testi-slider">
+            <div class="testi-slider container">
               <div class="testis-cont">
                 <div class="card">
                   <div class="rating">
@@ -402,9 +537,9 @@
                   </div>
                 </div>
               </div>
-              <div class="testi-img">
+              <!-- <div class="testi-img">
                 <img src="{{landingpagedata?.TestimonialImage1}}" alt="">
-              </div>
+              </div> -->
             </div>
           </ng-template>
 
@@ -427,9 +562,9 @@
                   </div>
                 </div>
               </div>
-              <div class="testi-img">
+              <!-- <div class="testi-img">
                 <img src="{{landingpagedata?.TestimonialImage2}}" alt="">
-              </div>
+              </div> -->
             </div>
           </ng-template>
           <ng-template carouselSlide class="owl-stage">
@@ -451,9 +586,9 @@
                   </div>
                 </div>
               </div>
-              <div class="testi-img">
+              <!-- <div class="testi-img">
                 <img src="{{landingpagedata?.TestimonialImage3}}" alt="">
-              </div>
+              </div> -->
             </div>
           </ng-template>
           <ng-template carouselSlide class="owl-stage">
@@ -475,9 +610,9 @@
                   </div>
                 </div>
               </div>
-              <div class="testi-img">
+              <!-- <div class="testi-img">
                 <img src="{{landingpagedata?.TestimonialImage4}}" alt="">
-              </div>
+              </div> -->
             </div>
           </ng-template>
         </owl-carousel-o>
@@ -489,89 +624,138 @@
 
 
 <!-- inquiry section start -->
-<section class="inquiry">
+<section id="inquiry" class="inquiry">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="inqu-title">
           <h4>INQUIRY FROM</h4>
-          <h5 class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis eius iste, reprehenderit ipsa
-            libero
-            quaerat. Error officiis impedit repellendus animi.</h5>
+          <h5 class="mt-4">We are dedicated to addressing your queries with precision and care. Our team is here to
+            ensure you receive the information and support you need for a seamless experience. Reach out to us anytime,
+            and we'll be happy to assist you.</h5>
+
         </div>
       </div>
 
-      <div class="col-lg-12 col-md-12 col-sm-6">
-        <div class="inquiry-form my-4">
-          <form>
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="mb-3 name">
-                  <input type="text" class="form-control" placeholder="Enter Name">
-                  <div class="name-iocn">
-                    <i class="bi bi-person-fill"></i>
-                  </div>
+      <div class="inquiry-form my-4">
+        <form (ngSubmit)="PostcontactUs(contactForm)" #contactForm="ngForm">
+          <div class="row">
+            <!-- Full Name -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="mb-3 name">
+                <input type="text" class="form-control" placeholder="Enter Name" [(ngModel)]="formData.fullName"
+                  name="fullName" required minlength="3" #fullName="ngModel" />
+                <div class="city-icon">
+                  <i class="bi bi-person-fill"></i>
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="mb-3 category">
-                  <input type="text" class="form-control" placeholder="Title Category">
-                  <div class="category-icon">
-                    <img src="../../assets/contact/category.png" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="mb-3 emails">
-                  <input type="text" class="form-control" placeholder="Enter Email">
-                  <div class="emails-icon">
-                    <i class="bi bi-envelope-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="mb-3 city">
-                  <input type="text" class="form-control" placeholder="Enter City">
-                  <div class="city-icon">
-                    <img src="../../assets/contact/city.png" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="mb-3 numbers">
-                  <input type="text" class="form-control" placeholder="Enter Phone number">
-                  <div class="numbers-icon">
-                    <i class="bi bi-telephone-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="mb-3 desc">
-                  <input type="text" class="form-control" placeholder="Enter Description">
-                  <div class="desc-icon">
-                    <img src="../../assets/contact/desc.png" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="submit-btn text-center">
-                  <button class="btn px-5">Submit</button>
-                </div>
-              </div>
-            </div>
-          </form>
 
-          <div class="col-lg-12">
-            <div class="whats-app text-end">
-              <button class="btn">
-                <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank">
-                  <i class="bi bi-whatsapp"></i>
-                </a>
-              </button>
+              </div>
+
+
+              <div *ngIf="fullName.invalid && fullName.touched" class="text-danger">
+                <small *ngIf="fullName.errors?.['required']">Name is required.</small>
+                <small *ngIf="fullName.errors?.['minlength']">Name must be at least 3 characters long.</small>
+              </div>
+
             </div>
+
+            <!-- Title Category -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="mb-3 category">
+                <select class="form-control" style="padding: 0.375rem 2.75rem" [(ngModel)]="formData.email" name="email"
+                  required #email="ngModel">
+                  <option value="" disabled selected>Select Title Category</option>
+                  <option value="MEDICLAIMS">MEDICLAIMS</option>
+                  <option value="GENERAL INSURANCE">GENERAL INSURANCE</option>
+                  <option value="MUTUAL FUND">MUTUAL FUND</option>
+                  <option value="Term Plan">Term Plan</option>
+                  <option value="Fixed Deposit(Bajaj Finserv)">Fixed Deposit (Bajaj Finserv)</option>
+                  <option value="SIP">SIP</option>
+                </select>
+                <div class="category-icon">
+                  <img src="../../assets/contact/category.png" alt="" />
+                </div>
+
+              </div>
+              <div *ngIf="email.invalid && email.touched" class="text-danger">
+                <small>Please select a title category.</small>
+              </div>
+            </div>
+
+            <!-- City -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="mb-3 city">
+                <input type="text" class="form-control" placeholder="Enter City" [(ngModel)]="formData.city" name="city"
+                  required minlength="2" #city="ngModel" />
+                <div class="city-icon">
+                  <img src="../../assets/contact/city.png" alt="" />
+                </div>
+
+              </div>
+              <div *ngIf="city.invalid && city.touched" class="text-danger">
+                <small *ngIf="city.errors?.['required']">City is required.</small>
+                <small *ngIf="city.errors?.['minlength']">City must be at least 2 characters long.</small>
+              </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="mb-3 numbers">
+                <input type="text" class="form-control" placeholder="Enter Phone Number"
+                  [(ngModel)]="formData.phoneNumber" name="phoneNumber" required pattern="^[0-9]{10}$"
+                  #phoneNumber="ngModel" />
+                <div class="numbers-icon">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+
+              </div>
+              <div *ngIf="phoneNumber.invalid && phoneNumber.touched" class="text-danger">
+                <small *ngIf="phoneNumber.errors?.['required']">Phone number is required.</small>
+                <small *ngIf="phoneNumber.errors?.['pattern']">Enter a valid 10-digit phone number.</small>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="mb-3 category">
+                <textarea class="form-control" placeholder="Write Your Message" style="padding: 0.375rem 2.75rem"
+                  [(ngModel)]="formData.organization" name="organization" required minlength="10"
+                  #organization="ngModel"></textarea>
+                <div class="category-icon">
+                  <img src="../../assets/contact/category.png" alt="" />
+                </div>
+
+              </div>
+              <div *ngIf="organization.invalid && organization.touched" class="text-danger">
+                <small *ngIf="organization.errors?.['required']">Description is required.</small>
+                <small *ngIf="organization.errors?.['minlength']">Description must be at least 10 characters
+                  long.</small>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="submit-btn text-center">
+                <button class="btn px-5" type="submit" [disabled]="contactForm.invalid">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+        <div class="col-lg-12">
+          <div class="whats-app text-end">
+            <button class="btn">
+              <a href="https://api.whatsapp.com/send?phone=919016356950" target="_blank">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </button>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -597,41 +781,59 @@
         <div class="link-list">
           <ul>
             <li>Home</li>
-            <li>About US</li>
-            <li>Statistics</li>
-            <li>Contact Us</li>
-            <li>Inquiry</li>
+            <li  (click)="scrollToSection('about')">About US</li>
+            <li (click)="scrollToSection('statistics')">Statistics</li>
+            <li (click)="scrollToSection('contact')">Contact Us</li>
+            <li  (click)="scrollToSection('inquiry')">Inquiry</li>
           </ul>
         </div>
       </div>
 
       <div class="col-lg-5 col-md-5 col-sm-12">
-        <div class="contact d-flex flex-warp align-items-center">
+        <!-- Address -->
+        <div class="contact d-flex flex-wrap align-items-center">
           <div class="location-icon">
             <i class="bi bi-geo-alt-fill fs-3"></i>
           </div>
-          <div class="location ms-3">
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore quis aliquid.</h5>
+          <div class="location ms-3" style="width: 80%;">
+            <h5>
+              <a style="color: white;" href="https://www.google.com/maps?q=21.2344216,72.8769033" target="_blank"
+                class="text-decoration-none">
+                B-68, Second-floor, Sumerucity Mall, In Front Of Krishna Township, Sudama Chowk, Mota Varacha, Surat
+              </a>
+            </h5>
           </div>
         </div>
-        <div class="mail d-flex flex-warp align-items-center">
+
+        <!-- Email -->
+        <div class="mail d-flex flex-wrap align-items-center">
           <div class="mail-icon">
             <i class="bi bi-envelope-fill fs-3"></i>
           </div>
           <div class="mail-cont ms-3">
-            <h5>example&#65;gmail.com</h5>
+            <h5>
+              <a style="color: white;" href="mailto:shayonainvestment2021@gmail.com" class="text-decoration-none">
+                shayonainvestment2021&#64;gmail.com
+              </a>
+            </h5>
           </div>
         </div>
 
-        <div class="callss d-flex flex-warp align-items-center">
+        <!-- Phone -->
+        <div class="callss d-flex flex-wrap align-items-center">
           <div class="callss-icon">
             <i class="bi bi-telephone-fill fs-3"></i>
           </div>
           <div class="callss-cont ms-3">
-            <h5>+91 98745 63210</h5>
+            <h5>
+              <a style="color: white;" href="tel:+919016356950" class="text-decoration-none">
+                +91 90163 56950
+              </a>
+            </h5>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -640,7 +842,8 @@
   <!-- Copyright Section -->
   <div class="row py-2 copyright">
     <div class="col-12 text-center">
-      <p>&copy; 2024 Create by <a href="https://swamiinfotech.in/" target="_blank" class="text-dark">Swami Infotech</a>.</p>
+      <p>&copy; 2024 Create by <a href="https://swamiinfotech.in/" target="_blank" class="text-dark">Swami Infotech</a>.
+      </p>
     </div>
   </div>
 
