@@ -58,17 +58,32 @@
               <a class="nav-link active" aria-current="page" href="#home" (click)="scrollToSection('home')">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  (click)="scrollToSection('about')">About</a>
+              <a class="nav-link" (click)="scrollToSection('about')">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="scrollToSection('export')">export</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"   (click)="scrollToSection('inquiry')">Inquiry</a>
+              <a class="nav-link" (click)="scrollToSection('statistics')">statistics</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  (click)="scrollToSection('statistics')">Statistics</a>
+              <a class="nav-link" (click)="scrollToSection('consult')">consult</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"   (click)="scrollToSection('contact')">Contact Us</a>
+              <a class="nav-link" (click)="scrollToSection('sectors')">sectors</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="scrollToSection('company')">company</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="scrollToSection('testimonial')">testimonial</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="scrollToSection('inquiry')">inquiry</a>
+            </li>
+
           </ul>
 
         </div>
@@ -111,7 +126,7 @@
 
 
 <!-- export section start -->
-<section class="export">
+<section id="export" class="export">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -152,7 +167,7 @@
 
 
 <!-- stastic section start -->
-<section  id="statistics" class="Statistics mt-5">
+<section id="statistics" class="Statistics mt-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -202,7 +217,7 @@
 
 
 <!-- section consult start -->
-<section class="consult text-center">
+<section id="consult" class="consult text-center">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -223,7 +238,7 @@
 
 
 <!-- section sector start -->
-<section class="sectors">
+<section id="sectors" class="sectors">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -356,7 +371,7 @@
 
 
 <!-- company section start -->
-<section class="company">
+<section id="company" class="company">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -366,71 +381,82 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card cardAB px-4">
-            <img src="{{landingpagedata?.CollboratedImage}}" alt="" class="img-fluid card-img-top-logos">
-            <div class="company-name my-4">
-              <h5>{{landingpagedata?.CompanyName1}}</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card cardAB px-4">
-            <img src="{{landingpagedata?.CompanyImage2}}" alt="" class="img-fluid card-img-top-logos">
-            <div class="company-name my-4">
-              <h5>{{landingpagedata?.CompanyName2}}</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card cardAB px-4">
-            <img src="{{landingpagedata?.CompanyImage3}}" alt="" class="img-fluid card-img-top-logos">
-            <div class="company-name my-4">
-              <h5>{{landingpagedata?.CompanyName3}}</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card cardAB px-4">
-            <img src="{{landingpagedata?.CompanyImage4}}" alt="" class="img-fluid card-img-top-logos">
-            <div class="company-name my-4">
-              <h5>{{landingpagedata?.CompanyName4}}</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card cardAB px-4">
-            <img src="{{landingpagedata.CompanyImage5}}" alt="" class="img-fluid card-img-top-logos">
-            <div class="company-name my-4">
-              <h5>{{landingpagedata?.CompanyName5}}</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card cardAB px-4">
-            <img src="{{landingpagedata.CompanyImage6}}" alt="" class="img-fluid card-img-top-logos">
-            <div class="company-name my-4">
-              <h5>{{landingpagedata?.CompanyName6}}</h5>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card cardAB px-4">
-            <img src="{{landingpagedata.CompanyImage7}}" alt="" class="img-fluid card-img-top-logos">
-            <div class="company-name my-4">
-              <h5>{{landingpagedata?.CompanyName7}}</h5>
-            </div>
-          </div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata?.CollboratedImage}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName1}}</h5>
+        </div> -->
       </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata?.CompanyImage2}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName2}}</h5>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata?.CompanyImage3}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName3}}</h5>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata?.CompanyImage4}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName4}}</h5>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata.CompanyImage5}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName5}}</h5>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata.CompanyImage6}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName6}}</h5>
+        </div> -->
+      </div>
+    </div>
+
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata.CompanyImage7}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName7}}</h5>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card cardAB px-4">
+        <img src="{{landingpagedata.CompanyImage8}}" alt="" class="img-fluid card-img-top-logos">
+        <!-- <div class="company-name my-4">
+          <h5>{{landingpagedata?.CompanyName7}}</h5>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -507,7 +533,7 @@
 
 
 <!-- testimonial section start -->
-<section class="testimonial">
+<section id="testimonial" class="testimonial">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -768,9 +794,8 @@
       <div class="col-lg-3 col-md-3 col-sm-12">
         <div class="footer-logo">
           <img src="../../assets/logo/logo.png" alt="Logo" width="100">
-          <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, aut commodi? Maxime officiis ipsa
-            reiciendis,
-            praesentium soluta molestiae iste cum quo.</p>
+          <p class="my-3">Managing your wealth has never been easier. Our expert-driven approach ensures that your
+            investments are optimized to align with your financial goals</p>
         </div>
       </div>
 
@@ -781,10 +806,10 @@
         <div class="link-list">
           <ul>
             <li>Home</li>
-            <li  (click)="scrollToSection('about')">About US</li>
+            <li (click)="scrollToSection('about')">About US</li>
             <li (click)="scrollToSection('statistics')">Statistics</li>
             <li (click)="scrollToSection('contact')">Contact Us</li>
-            <li  (click)="scrollToSection('inquiry')">Inquiry</li>
+            <li (click)="scrollToSection('inquiry')">Inquiry</li>
           </ul>
         </div>
       </div>
@@ -842,7 +867,8 @@
   <!-- Copyright Section -->
   <div class="row py-2 copyright">
     <div class="col-12 text-center">
-      <p>&copy; 2024 Create by <a href="https://swamiinfotech.in/" target="_blank" class="text-dark">Swami Infotech</a>.
+      <p style="margin-bottom: 0;">&copy; 2025 Created by <a href="https://swamiinfotech.in/" target="_blank"
+          class="text-dark">Swami Infotech</a>.
       </p>
     </div>
   </div>
